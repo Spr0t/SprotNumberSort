@@ -13,12 +13,18 @@ namespace ConsoleApp1
         static void Main(string[] args)
         {
 
-            Console.WriteLine("Введите кол-во случайных чисел: ");
-            int go = int.Parse(Console.ReadLine());
-            NumbersSort n = new NumbersSort(go);
-            n.GenerateNumbers();
-            n.Sort();
-            n.DrawSorted();
+            NumbersSort v = new NumbersSort();
+            v.NumbersValue();
+            v.Print();
+            v.SortMinToMax();
+            Console.WriteLine("Отсортированый массив:");
+            v.Print();
+            v.AvarageOfAll();
+            Console.WriteLine($"Среднее значение всех элементов в массиве: {v.AvarageofAll}");
+            Console.WriteLine($"Минимальное значение: {v.Min}");
+            Console.WriteLine($"Максимальное значение: {v.Max}");
+
+
             Console.ReadLine();
 
         }
